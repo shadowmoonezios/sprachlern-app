@@ -9,8 +9,6 @@ const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/sprachlern-a
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
   retryWrites: true
 }).then(() => {
   console.log('Mit MongoDB verbunden.');
