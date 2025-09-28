@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // MongoDB-Verbindung
-const dbURI = 'mongodb://localhost:27017/sprachlern-app';
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/sprachlern-app';
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
