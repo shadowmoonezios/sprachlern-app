@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost:27017/sprachlern?retryWrites=true&w=majori
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
-  console.log('Mit MongoDB verbunden');
+  console.log('Mit MongoDB verbunden.');
 }).catch(err => {
   console.error('MongoDB Verbindung fehlgeschlagen:', err);
 });
