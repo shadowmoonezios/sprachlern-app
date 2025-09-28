@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // MongoDB-Verbindung
-mongoose.connect('mongodb://localhost:27017/sprachlern', {
+mongoose.connect('mongodb://localhost:27017/sprachlern?retryWrites=true', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
