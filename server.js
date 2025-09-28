@@ -5,9 +5,12 @@ const app = express();
 app.use(express.json());
 
 // MongoDB-Verbindung
-mongoose.connect('mongodb://localhost:27017/sprachlern-app?retryWrites=true&w=majority', {
+const dbURI = 'mongodb://localhost:27017/sprachlern-app';
+mongoose.connect(dbURI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 }).then(() => {
   console.log('Mit MongoDB verbunden.');
 }).catch(err => {
