@@ -1,7 +1,7 @@
 {
   "name": "sprachlern-app",
   "version": "1.0.0",
-  "description": "Eine Anwendung zum Erlernen von Sprachen",
+  "description": "An application for language learning and practicing.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
